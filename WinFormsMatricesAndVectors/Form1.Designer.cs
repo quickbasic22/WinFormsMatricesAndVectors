@@ -42,6 +42,8 @@
             Matrix2ColumnWidth = new NumericUpDown();
             Matrix3RowWidth = new NumericUpDown();
             Matrix3ColumnWidth = new NumericUpDown();
+            comboBox1 = new ComboBox();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Matrix1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Matrix2).BeginInit();
@@ -165,11 +167,32 @@
             Matrix3ColumnWidth.TabIndex = 8;
             Matrix3ColumnWidth.ValueChanged += Matrix3ColumnWidth_ValueChanged;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Addition", "Substraction", "Multipication", "Division", "Inverse" });
+            comboBox1.Location = new Point(942, 490);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(277, 23);
+            comboBox1.TabIndex = 10;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(982, 556);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 11;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1331, 616);
+            Controls.Add(button1);
+            Controls.Add(comboBox1);
             Controls.Add(Matrix3RowWidth);
             Controls.Add(Matrix3ColumnWidth);
             Controls.Add(Matrix2RowWidth);
@@ -216,5 +239,7 @@
         private NumericUpDown Matrix2ColumnWidth;
         private NumericUpDown Matrix3RowWidth;
         private NumericUpDown Matrix3ColumnWidth;
+        private ComboBox comboBox1;
+        private Button button1;
     }
 }

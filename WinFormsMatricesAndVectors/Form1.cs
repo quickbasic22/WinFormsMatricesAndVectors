@@ -9,24 +9,21 @@ namespace WinFormsMatricesAndVectors
 {
     public partial class Form1 : Form
     {
-             Matrix<double> m1;
-             Matrix<double> m2;
-             Matrix<double> m3;
-             Matrix<double> resultMatrix;
-             
+        Matrix<double> m1;
+        Matrix<double> m2;
+        Matrix<double> m3;
+        
+
         public Form1()
         {
             InitializeComponent();
             Matrix1.RowCount = 2;
             Matrix2.RowCount = 2;
             Matrix3.RowCount = 2;
+
             Matrix1.ColumnCount = 2;
             Matrix2.ColumnCount = 2;
             Matrix3.ColumnCount = 2;
-
-            Matrix1.ColumnCount = 1;
-            Matrix2.ColumnCount = 1;
-            Matrix3.ColumnCount = 1;
 
             Matrix1RowWidth.Minimum = 2;
             Matrix1ColumnWidth.Minimum = 1;
@@ -48,6 +45,11 @@ namespace WinFormsMatricesAndVectors
             Matrix3ColumnWidth.Maximum = 5;
             Matrix3RowWidth.Value = 2;
             Matrix3ColumnWidth.Value = 2;
+
+            Matrix1.AllowUserToAddRows = false;
+            Matrix2.AllowUserToAddRows = false;
+            Matrix3.AllowUserToAddRows = false;
+
         }
 
         private void Matrix1ColumnWidth_ValueChanged(object sender, EventArgs e)
@@ -61,21 +63,25 @@ namespace WinFormsMatricesAndVectors
             {
                 case 1:
                     Matrix1.Columns.Clear();
+                    
                     Matrix1.Columns.Add("Column1", "Column1");
                     return;
                 case 2:
                     Matrix1.Columns.Clear();
+                    
                     Matrix1.Columns.Add("Column1", "Column1");
                     Matrix1.Columns.Add("Column2", "Column2");
                     return;
                 case 3:
                     Matrix1.Columns.Clear();
+                    
                     Matrix1.Columns.Add("Column1", "Column1");
                     Matrix1.Columns.Add("Column2", "Column2");
                     Matrix1.Columns.Add("Column3", "Column3");
                     return;
                 case 4:
                     Matrix1.Columns.Clear();
+                    
                     Matrix1.Columns.Add("Column1", "Column1");
                     Matrix1.Columns.Add("Column2", "Column2");
                     Matrix1.Columns.Add("Column3", "Column3");
@@ -83,6 +89,7 @@ namespace WinFormsMatricesAndVectors
                     return;
                 case 5:
                     Matrix1.Columns.Clear();
+                   
                     Matrix1.Columns.Add("Column1", "Column1");
                     Matrix1.Columns.Add("Column2", "Column2");
                     Matrix1.Columns.Add("Column3", "Column3");
@@ -102,21 +109,25 @@ namespace WinFormsMatricesAndVectors
             {
                 case 1:
                     Matrix2.Columns.Clear();
+                   
                     Matrix2.Columns.Add("Column1", "Column1");
                     return;
                 case 2:
                     Matrix2.Columns.Clear();
+                   
                     Matrix2.Columns.Add("Column1", "Column1");
                     Matrix2.Columns.Add("Column2", "Column2");
                     return;
                 case 3:
                     Matrix2.Columns.Clear();
+                   
                     Matrix2.Columns.Add("Column1", "Column1");
                     Matrix2.Columns.Add("Column2", "Column2");
                     Matrix2.Columns.Add("Column3", "Column3");
                     return;
                 case 4:
                     Matrix2.Columns.Clear();
+                    
                     Matrix2.Columns.Add("Column1", "Column1");
                     Matrix2.Columns.Add("Column2", "Column2");
                     Matrix2.Columns.Add("Column3", "Column3");
@@ -124,6 +135,7 @@ namespace WinFormsMatricesAndVectors
                     return;
                 case 5:
                     Matrix2.Columns.Clear();
+                    
                     Matrix2.Columns.Add("Column1", "Column1");
                     Matrix2.Columns.Add("Column2", "Column2");
                     Matrix2.Columns.Add("Column3", "Column3");
@@ -144,17 +156,20 @@ namespace WinFormsMatricesAndVectors
             {
                 case 1:
                     Matrix2.Rows.Clear();
+                    
                     Matrix2.Rows.Add(1);
                     Matrix2.Rows[0].HeaderCell.Value = "Row 1";
                     break;
                 case 2:
                     Matrix2.Rows.Clear();
+                   
                     Matrix2.Rows.Add(2);
                     Matrix2.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix2.Rows[1].HeaderCell.Value = "Row 2";
                     break;
                 case 3:
                     Matrix2.Rows.Clear();
+                   
                     Matrix2.Rows.Add(3);
                     Matrix2.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix2.Rows[1].HeaderCell.Value = "Row 2";
@@ -162,6 +177,7 @@ namespace WinFormsMatricesAndVectors
                     break;
                 case 4:
                     Matrix2.Rows.Clear();
+                   
                     Matrix2.Rows.Add(4);
                     Matrix2.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix2.Rows[1].HeaderCell.Value = "Row 2";
@@ -170,6 +186,7 @@ namespace WinFormsMatricesAndVectors
                     break;
                 case 5:
                     Matrix2.Rows.Clear();
+                    
                     Matrix2.Rows.Add(5);
                     Matrix2.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix2.Rows[1].HeaderCell.Value = "Row 2";
@@ -190,21 +207,25 @@ namespace WinFormsMatricesAndVectors
             {
                 case 1:
                     Matrix3.Columns.Clear();
+                    
                     Matrix3.Columns.Add("Column1", "Column1");
                     return;
                 case 2:
                     Matrix3.Columns.Clear();
+                   
                     Matrix3.Columns.Add("Column1", "Column1");
                     Matrix3.Columns.Add("Column2", "Column2");
                     return;
                 case 3:
                     Matrix3.Columns.Clear();
+                    
                     Matrix3.Columns.Add("Column1", "Column1");
                     Matrix3.Columns.Add("Column2", "Column2");
                     Matrix3.Columns.Add("Column3", "Column3");
                     return;
                 case 4:
                     Matrix3.Columns.Clear();
+                    
                     Matrix3.Columns.Add("Column1", "Column1");
                     Matrix3.Columns.Add("Column2", "Column2");
                     Matrix3.Columns.Add("Column3", "Column3");
@@ -212,6 +233,7 @@ namespace WinFormsMatricesAndVectors
                     return;
                 case 5:
                     Matrix3.Columns.Clear();
+                   
                     Matrix3.Columns.Add("Column1", "Column1");
                     Matrix3.Columns.Add("Column2", "Column2");
                     Matrix3.Columns.Add("Column3", "Column3");
@@ -233,17 +255,20 @@ namespace WinFormsMatricesAndVectors
             {
                 case 1:
                     Matrix3.Rows.Clear();
+                   
                     Matrix3.Rows.Add(1);
                     Matrix3.Rows[0].HeaderCell.Value = "Row 1";
                     break;
                 case 2:
                     Matrix3.Rows.Clear();
+                    
                     Matrix3.Rows.Add(2);
                     Matrix3.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix3.Rows[1].HeaderCell.Value = "Row 2";
                     break;
                 case 3:
                     Matrix3.Rows.Clear();
+                    
                     Matrix3.Rows.Add(3);
                     Matrix3.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix3.Rows[1].HeaderCell.Value = "Row 2";
@@ -251,6 +276,7 @@ namespace WinFormsMatricesAndVectors
                     break;
                 case 4:
                     Matrix3.Rows.Clear();
+                    
                     Matrix3.Rows.Add(4);
                     Matrix3.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix3.Rows[1].HeaderCell.Value = "Row 2";
@@ -259,6 +285,7 @@ namespace WinFormsMatricesAndVectors
                     break;
                 case 5:
                     Matrix3.Rows.Clear();
+                    
                     Matrix3.Rows.Add(5);
                     Matrix3.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix3.Rows[1].HeaderCell.Value = "Row 2";
@@ -281,17 +308,20 @@ namespace WinFormsMatricesAndVectors
             {
                 case 1:
                     Matrix1.Rows.Clear();
+                    
                     Matrix1.Rows.Add(1);
                     Matrix1.Rows[0].HeaderCell.Value = "Row 1";
                     break;
                 case 2:
                     Matrix1.Rows.Clear();
+                   
                     Matrix1.Rows.Add(2);
                     Matrix1.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix1.Rows[1].HeaderCell.Value = "Row 2";
                     break;
                 case 3:
                     Matrix1.Rows.Clear();
+                    
                     Matrix1.Rows.Add(3);
                     Matrix1.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix1.Rows[1].HeaderCell.Value = "Row 2";
@@ -299,6 +329,7 @@ namespace WinFormsMatricesAndVectors
                     break;
                 case 4:
                     Matrix1.Rows.Clear();
+                    
                     Matrix1.Rows.Add(4);
                     Matrix1.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix1.Rows[1].HeaderCell.Value = "Row 2";
@@ -307,7 +338,9 @@ namespace WinFormsMatricesAndVectors
                     break;
                 case 5:
                     Matrix1.Rows.Clear();
+
                     Matrix1.Rows.Add(5);
+                    
                     Matrix1.Rows[0].HeaderCell.Value = "Row 1";
                     Matrix1.Rows[1].HeaderCell.Value = "Row 2";
                     Matrix1.Rows[2].HeaderCell.Value = "Row 3";
@@ -339,138 +372,86 @@ namespace WinFormsMatricesAndVectors
 
             Matrix<double> m1 = Matrix<double>.Build.DenseOfArray(dataArray);
             MessageBox.Show(m1.ToMatrixString());
-         
+
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        void FillMatrixColumns3(Matrix<double> m3)
         {
-            var comboBox = sender as ComboBox;
+            // Set cell values in the DataTable
+            for (int i = 0; i < m3.RowCount; i++)
+            {
+                for (int j = 0; j < m3.ColumnCount; j++)
+                {
+                    DataGridViewCell cell = Matrix3[j, i];
+                    cell.Value = m3[i, j];
+                }
+            }
+        }
+
+        void FillMatrixColumns2(Matrix<double> m2)
+        {
+            // Set cell values in the DataTable
+            for (int i = 0; i < Matrix2.RowCount; i++)
+            {
+                for (int j = 0; j < Matrix2.ColumnCount; j++)
+                {
+                    DataGridViewCell cell = Matrix2[j, i];
+                    m2[i, j] = double.Parse(cell.Value.ToString());
+                }
+            }
+        }
+
+        void FillMatrixColumns1(Matrix<double> m1)
+        {
+
+            // Set cell values in the DataTable
+            for (int i = 0; i < Matrix1.RowCount; i++)
+            {
+                for (int j = 0; j < Matrix1.ColumnCount; j++)
+                {
+                    DataGridViewCell cell = Matrix1[j, i];
+                    m1[i, j] = double.Parse(cell.Value.ToString());
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             Matrix<double> m1Matrix = Matrix<double>.Build.Dense(Int32.Parse(Matrix1RowWidth.Value.ToString()), Int32.Parse(Matrix1ColumnWidth.Value.ToString()));
             Matrix<double> m2Matrix = Matrix<double>.Build.Dense(Int32.Parse(Matrix2RowWidth.Value.ToString()), Int32.Parse(Matrix2ColumnWidth.Value.ToString()));
             Matrix<double> m3Matrix = Matrix<double>.Build.Dense(Int32.Parse(Matrix3RowWidth.Value.ToString()), Int32.Parse(Matrix3ColumnWidth.Value.ToString()));
 
-            m1 = m1Matrix.Clone();
-            m2 = m2Matrix.Clone();
-            m3 = m3Matrix.Clone();
+            m1 = m1Matrix;
+            m2 = m2Matrix;
+            m3 = m3Matrix;
 
             FillMatrixColumns1(m1);
             FillMatrixColumns2(m2);
+           
+            
 
-
-            switch (comboBox.SelectedIndex)
+            switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    resultMatrix = m1 + m2;
+                    m3 = m1 + m2;
                     break;
                 case 1:
-                    resultMatrix = m1 - m2;
+                    m3 = m1 - m2;
                     break;
                 case 2:
-                    resultMatrix = m1.PointwiseMultiply(m2);
+                    m3 = m1.PointwiseMultiply(m2);
                     break;
                 case 3:
-                    resultMatrix = m1.PointwiseDivide(m2);
+                    m3 = m1.PointwiseDivide(m2);
                     break;
                 case 4:
-                    resultMatrix = m1.Inverse();
+                    m3 = m1.Inverse();
                     break;
                 default:
-                    resultMatrix = m1;
+                    m3 = Matrix<double>.Build.DenseIdentity(Int32.Parse(Matrix3RowWidth.Value.ToString()), Int32.Parse(Matrix3ColumnWidth.Value.ToString()));
                     break;
             }
-            FillMatrixColumns3(resultMatrix);
-        }
-       void FillMatrixColumns3(Matrix<double> matrix)
-        {
-            // Create a new DataTable
-            DataTable dataTable = new DataTable();
-
-            // Add columns to the DataTable
-            for (int j = 0; j < m1.ColumnCount; j++)
-            {
-                dataTable.Columns.Add($"Column{j + 1}", typeof(double));
-            }
-
-            // Add rows to the DataTable
-            for (int i = 0; i < m1.RowCount; i++)
-            {
-                DataRow dataRow = dataTable.NewRow();
-                dataTable.Rows.Add(dataRow);
-            }
-
-            // Set cell values in the DataTable
-            for (int i = 0; i < m1.RowCount; i++)
-            {
-                for (int j = 0; j < m1.ColumnCount; j++)
-                {
-                    dataTable.Rows[i][j] = m1[i, j];
-                }
-            }
-
-            // Bind the DataTable to the DataGridView
-            Matrix3.DataSource = dataTable;
-        }
-
-        void FillMatrixColumns2(Matrix<double> matrix)
-        {
-            // Create a new DataTable
-            DataTable dataTable = new DataTable();
-
-            // Add columns to the DataTable
-            for (int j = 0; j < m1.ColumnCount; j++)
-            {
-                dataTable.Columns.Add($"Column{j + 1}", typeof(double));
-            }
-
-            // Add rows to the DataTable
-            for (int i = 0; i < m1.RowCount; i++)
-            {
-                DataRow dataRow = dataTable.NewRow();
-                dataTable.Rows.Add(dataRow);
-            }
-
-            // Set cell values in the DataTable
-            for (int i = 0; i < m1.RowCount; i++)
-            {
-                for (int j = 0; j < m1.ColumnCount; j++)
-                {
-                    dataTable.Rows[i][j] = m1[i, j];
-                }
-            }
-
-            // Bind the DataTable to the DataGridView
-            Matrix2.DataSource = dataTable;
-        }
-
-        void FillMatrixColumns1(Matrix<double> matrix)
-        {
-            // Create a new DataTable
-            DataTable dataTable = new DataTable();
-
-            // Add columns to the DataTable
-            for (int j = 0; j < m1.ColumnCount; j++)
-            {
-                dataTable.Columns.Add($"Column{j + 1}", typeof(double));
-            }
-
-            // Add rows to the DataTable
-            for (int i = 0; i < m1.RowCount; i++)
-            {
-                DataRow dataRow = dataTable.NewRow();
-                dataTable.Rows.Add(dataRow);
-            }
-
-            // Set cell values in the DataTable
-            for (int i = 0; i < m1.RowCount; i++)
-            {
-                for (int j = 0; j < m1.ColumnCount; j++)
-                {
-                    dataTable.Rows[i][j] = m1[i, j];
-                }
-            }
-
-            // Bind the DataTable to the DataGridView
-            Matrix1.DataSource = dataTable;
+            FillMatrixColumns3(m3);
         }
     }
 }

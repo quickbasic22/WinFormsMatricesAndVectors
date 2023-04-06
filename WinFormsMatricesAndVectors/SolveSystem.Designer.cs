@@ -34,6 +34,7 @@
             numericUpDown1 = new NumericUpDown();
             numericUpDown2 = new NumericUpDown();
             button1 = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -94,11 +95,20 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(52, 173);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(588, 195);
+            textBox1.TabIndex = 6;
+            // 
             // SolveSystem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(numericUpDown2);
             Controls.Add(numericUpDown1);
@@ -115,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -125,5 +136,6 @@
         private NumericUpDown numericUpDown1;
         private NumericUpDown numericUpDown2;
         private Button button1;
+        private TextBox textBox1;
     }
 }

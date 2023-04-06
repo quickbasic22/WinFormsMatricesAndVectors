@@ -194,12 +194,16 @@ namespace WinFormsMatricesAndVectors
         private void button1_Click(object sender, EventArgs e)
         {
             m1 = Matrix<double>.Build.Dense(Int32.Parse(numericUpDown1.Value.ToString()), Int32.Parse(numericUpDown2.Value.ToString()));
-
             CopyMatrixToDataGrid(m1);
+            var b = Vector<double>.Build.Dense(new double[] { -4, 8 });
+            var x = m1.Solve(b);
 
-            m2 = m1.Inverse();
+            
+           // CopyMatrixToDataGrid(m1);
 
-            FillMatrixColumns3(m2);
+            textBox1.Text = x.ToVectorString();
+
+           // FillMatrixColumns3(m2);
         }
 
         void FillMatrixColumns3(Matrix<double> m3)
@@ -217,8 +221,8 @@ namespace WinFormsMatricesAndVectors
 
         void CopyMatrixToDataGrid(Matrix<double> m1)
         {
-            dataGridView2.RowCount = m1.RowCount;
-            dataGridView2.ColumnCount = m1.ColumnCount;
+            dataGridView1.RowCount = m1.RowCount;
+            dataGridView1.ColumnCount = m1.ColumnCount;
             // Set cell values in the DataTable
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
@@ -226,6 +230,21 @@ namespace WinFormsMatricesAndVectors
                 {
                     DataGridViewCell cell = dataGridView1[j, i];
                     m1[i, j] = double.Parse(cell.Value.ToString());
+                }
+            }
+        }
+
+        void CopyDataGridToMatrix(Matrix<double> m1)
+        {
+            dataGridView1.RowCount = m1.RowCount;
+            dataGridView1.ColumnCount = m1.ColumnCount;
+            // Set cell values in the DataTable
+            for (int i = 0; i < m1.RowCount; i++)
+            {
+                for (int j = 0; j < m1.ColumnCount; j++)
+                {
+                    DataGridViewCell cell = dataGridView1[j, i];
+                    cell.Value = m1[j, i];
                 }
             }
         }

@@ -97,7 +97,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(52, 173);
+            textBox1.Location = new Point(684, 209);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(588, 195);
@@ -107,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1604, 678);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(numericUpDown2);

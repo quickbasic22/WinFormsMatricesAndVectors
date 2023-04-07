@@ -195,15 +195,15 @@ namespace WinFormsMatricesAndVectors
         {
             m1 = Matrix<double>.Build.Dense(Int32.Parse(numericUpDown1.Value.ToString()), Int32.Parse(numericUpDown2.Value.ToString()));
             CopyMatrixToDataGrid(m1);
-            var b = Vector<double>.Build.Dense(new double[] { -4, 8 });
+            var b = Vector<double>.Build.Dense(new double[] { 2, 4, 0 });
             var x = m1.Solve(b);
 
-            
-           // CopyMatrixToDataGrid(m1);
+
+            // CopyMatrixToDataGrid(m1);
 
             textBox1.Text = x.ToVectorString();
 
-           // FillMatrixColumns3(m2);
+            // FillMatrixColumns3(m2);
         }
 
         void FillMatrixColumns3(Matrix<double> m3)

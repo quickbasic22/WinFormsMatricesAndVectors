@@ -193,15 +193,44 @@ namespace WinFormsMatricesAndVectors
 
         private void button1_Click(object sender, EventArgs e)
         {
-            m1 = Matrix<double>.Build.Dense(Int32.Parse(numericUpDown1.Value.ToString()), Int32.Parse(numericUpDown2.Value.ToString()));
-            CopyMatrixToDataGrid(m1);
-            var b = Vector<double>.Build.Dense(new double[] { 2, 4, 0 });
-            var x = m1.Solve(b);
+            // Define the matrix A and vector b
+            var A = Matrix<double>.Build.DenseOfArray(new double[,] {
+                    { 3, 2, -1 },
+                    { 2, -2, 4 },
+                    { -1, 0.5, -1 }});
+            var b = Vector<double>.Build.Dense(new double[] { 1, -2, 0 });
+
+            // Perform LU decomposition on A
+            var lu = A.LU();
+
+            // Solve for x using the LU decomposition and vector b
+            var x = lu.Solve(b);
+
+            double[] first = { 3, 2, -1 };
+            double[] second = { 2, -2, 4 };
+            double[] third = { -1, 0.5, -1 };
+            dataGridView1.Columns.Add("Row1", "Row1");
+            dataGridView1.Columns.Add("Row2", "Row2");
+            dataGridView1.Columns.Add("Row3", "Row3");
+
+            dataGridView1.Rows.Add(3, 2, -1);
+            dataGridView1.Rows.Add(2, -2, 4);
+            dataGridView1.Rows.Add(-1, 0.5, -1);
+
+           
+
+            CopyMatrixToDataGrid(A);
+                       
+
+            //m1 = Matrix<double>.Build.Dense(Int32.Parse(numericUpDown1.Value.ToString()), Int32.Parse(numericUpDown2.Value.ToString()));
+            //CopyMatrixToDataGrid(m1);
+            //var b = Vector<double>.Build.Dense(new double[] { 2, 4, 0 });
+            //var x = m1.Solve(b);
 
 
             // CopyMatrixToDataGrid(m1);
-
-            textBox1.Text = x.ToVectorString();
+           
+            textBox1.Text += x.ToVectorString();
 
             // FillMatrixColumns3(m2);
         }

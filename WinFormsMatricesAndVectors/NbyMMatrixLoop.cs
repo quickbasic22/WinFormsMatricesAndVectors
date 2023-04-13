@@ -35,8 +35,16 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i == 0 & j <= 0 && buttons[0, 0].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i == 0 && j <= 0 && buttons[0, 0].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
                     count++;
                 }
             }       
@@ -49,8 +57,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i == 0 && j <= 1 && buttons[0, 1].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i == 0 && j <= 1 && buttons[0, 1].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -63,8 +80,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i == 0 && j <= 2 && buttons[0, 2].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i == 0 && j <= 2 && buttons[0, 2].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -77,8 +103,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i == 0 && j <= 3 && buttons[0, 3].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i == 0 && j <= 3 && buttons[0, 3].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -91,8 +126,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 1 && j <= 0 && buttons[1, 0].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 1 && j <= 0 && buttons[1, 0].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -105,8 +149,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 1 && j <= 1 && buttons[1, 1].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 1 && j <= 1 && buttons[1, 1].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -119,8 +172,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 1 && j <= 2 && buttons[1, 2].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 1 && j <= 2 && buttons[1, 2].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -133,8 +195,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 1 && j <= 3 && buttons[1, 3].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 1 && j <= 3 && buttons[1, 3].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -147,8 +218,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 2 && j <= 0 && buttons[2, 0].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 2 && j <= 0 && buttons[2, 0].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -161,8 +241,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 2 && j <= 1 && buttons[2, 1].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 2 && j <= 1 && buttons[2, 1].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -175,8 +264,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 2 && j <= 2 && buttons[2, 2].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 2 && j <= 2 && buttons[2, 2].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -189,8 +287,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 2 && j <= 3 && buttons[2, 3].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 2 && j <= 3 && buttons[2, 3].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -203,8 +310,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 3 && j <= 0 && buttons[3, 0].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 3 && j <= 0 && buttons[3, 0].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -217,8 +333,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 3 && j <= 1 && buttons[3, 1].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 3 && j <= 1 && buttons[3, 1].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -231,8 +356,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 3 && j <= 2 && buttons[3, 2].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 3 && j <= 2 && buttons[3, 2].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }
@@ -245,8 +379,17 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    buttons[i, j].BackColor = Color.Red;
-                    buttons[i, j].Text = "Matrix" + count.ToString();
+                    if (i <= 3 && j <= 3 && buttons[3, 3].BackColor != Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.Red;
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+                    else if (i <= 3 && j <= 3 && buttons[3, 3].BackColor == Color.Red)
+                    {
+                        buttons[i, j].BackColor = Color.FromName("Control");
+                        buttons[i, j].Text = "Matrix" + count.ToString();
+                    }
+
                     count++;
                 }
             }

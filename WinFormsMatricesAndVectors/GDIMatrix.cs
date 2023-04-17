@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -23,12 +24,7 @@ namespace WinFormsMatricesAndVectors
         public GDIMatrix()
         {
             InitializeComponent();
-            points = new Point[]
-            {
-                new Point(1180, 161),
-                new Point(946, 661),
-                new Point(1500, 661)
-            };
+           
             textBox1.Visible = false;
             displayMatrixDimensions();
         }
@@ -62,10 +58,14 @@ namespace WinFormsMatricesAndVectors
 
         private void GDIMatrix_Paint(object sender, PaintEventArgs e)
         {
+              
+            e.Graphics.ResetTransform();
+
             float xMin = -10f;
             float xMax = 10f;
             float yMin = -7f;
             float yMax = 7f;
+
 
             float xRange = xMax - xMin;
             float yRange = yMax - yMin;
@@ -87,22 +87,23 @@ namespace WinFormsMatricesAndVectors
 
                 // Transform the coordinates of the point using the current transformation matrix
                 PointF pt = new PointF(i, y);
-                e.Graphics.Transform.TransformPoints(new PointF[] { pt });
+               
 
                 // Draw a small dot at the transformed point
                 e.Graphics.DrawLine(bluePen, pt.X, pt.Y, pt.X + 0.01f, pt.Y + y);
             }
-
-
+                    
+           
             Point[] mouseTransformed = new Point[] { mouseLocation };
-
             e.Graphics.TransformPoints(CoordinateSpace.World, CoordinateSpace.Page, mouseTransformed);
 
-            Font myFont = new Font("Arial", 0.1f, FontStyle.Bold);
+            float displayHeight = float.Parse(e.Graphics.VisibleClipBounds.Height.ToString());
+            int invertedY = (int)Math.Round(displayHeight, 0) - mouseLocation.Y;
+            Point invertedMouseLocation = new Point(mouseLocation.X, invertedY);
 
-          
-           
-            e.Graphics.DrawString(String.Format("x = {0}\n\ry = {1}", mouseTransformed[0].X.ToString(), -mouseTransformed[0].Y) , myFont, Brushes.Blue, mouseTransformed[0]);
+            Font myFont = new Font("Arial", 0.1f, FontStyle.Bold);
+            e.Graphics.DrawString(String.Format("x = {0}\n\ry = {1}", invertedMouseLocation.X.ToString(), invertedMouseLocation.Y), myFont, Brushes.Blue, invertedMouseLocation);
+
 
         }
 
@@ -138,6 +139,52 @@ namespace WinFormsMatricesAndVectors
             //MainMatrix.Reset();
             //MainMatrix.Rotate(90);
             //MatrixDimensions2(MainMatrix);
+        }
+
+        private void GDIMatrix_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            points = new Point[]
+           {
+                new Point(1180, 161),
+                new Point(946, 661),
+                new Point(1500, 661)
+           };
+
+            for (int i = 0; i < points.Length; i++)
+            {
+                MessageBox.Show(points[i].ToString());
+            }
+
+            Graphics g = this.CreateGraphics();
+            float xMin = -10f;
+            float xMax = 10f;
+            float yMin = -7f;
+            float yMax = 7f;
+
+
+            float xRange = xMax - xMin;
+            float yRange = yMax - yMin;
+
+            float scaleX = this.Width / xRange;
+            float scaleY = this.Height / yRange;
+
+            // Flip the y-axis direction by setting the second element of the scaling vector to negative
+            g.Transform = new Matrix(scaleX, 0, 0, -scaleY, this.Width / 2, this.Height / 2);
+
+            Matrix matrixRight = new Matrix(scaleX, 0, 0, scaleY, this.Width / 2, this.Height / 2);
+
+            g.TransformPoints(CoordinateSpace.World, CoordinateSpace.Page, points);
+
+
+            for (int i = 0;i < points.Length;i++)
+            {
+                MessageBox.Show(points[i].ToString());
+            }
         }
     }
 }

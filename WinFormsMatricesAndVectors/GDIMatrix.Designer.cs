@@ -29,26 +29,39 @@
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(21, 12);
+            textBox1.Location = new Point(30, 3);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(360, 524);
             textBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(491, 346);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // GDIMatrix
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1387, 621);
+            Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "GDIMatrix";
             Text = "GDIMatrix";
             TransparencyKey = Color.FromArgb(255, 128, 0);
             WindowState = FormWindowState.Maximized;
+            Load += GDIMatrix_Load;
             Paint += GDIMatrix_Paint;
             MouseMove += GDIMatrix_MouseMove;
             ResumeLayout(false);
@@ -58,5 +71,6 @@
         #endregion
 
         private TextBox textBox1;
+        private Button button1;
     }
 }

@@ -44,11 +44,15 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            textBox1 = new TextBox();
+            button17 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button13
             // 
-            button13.Location = new Point(241, 280);
+            button13.Location = new Point(245, 144);
             button13.Name = "button13";
             button13.Size = new Size(75, 23);
             button13.TabIndex = 31;
@@ -58,7 +62,7 @@
             // 
             // button14
             // 
-            button14.Location = new Point(322, 280);
+            button14.Location = new Point(326, 144);
             button14.Name = "button14";
             button14.Size = new Size(75, 23);
             button14.TabIndex = 30;
@@ -68,7 +72,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(403, 280);
+            button15.Location = new Point(407, 144);
             button15.Name = "button15";
             button15.Size = new Size(75, 23);
             button15.TabIndex = 29;
@@ -78,7 +82,7 @@
             // 
             // button16
             // 
-            button16.Location = new Point(484, 280);
+            button16.Location = new Point(488, 144);
             button16.Name = "button16";
             button16.Size = new Size(75, 23);
             button16.TabIndex = 28;
@@ -88,7 +92,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(241, 234);
+            button9.Location = new Point(245, 98);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 27;
@@ -98,7 +102,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(322, 234);
+            button10.Location = new Point(326, 98);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 26;
@@ -108,7 +112,7 @@
             // 
             // button11
             // 
-            button11.Location = new Point(403, 234);
+            button11.Location = new Point(407, 98);
             button11.Name = "button11";
             button11.Size = new Size(75, 23);
             button11.TabIndex = 25;
@@ -118,7 +122,7 @@
             // 
             // button12
             // 
-            button12.Location = new Point(484, 234);
+            button12.Location = new Point(488, 98);
             button12.Name = "button12";
             button12.Size = new Size(75, 23);
             button12.TabIndex = 24;
@@ -128,7 +132,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(241, 190);
+            button5.Location = new Point(245, 54);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 23;
@@ -138,7 +142,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(322, 190);
+            button6.Location = new Point(326, 54);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 22;
@@ -148,7 +152,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(403, 190);
+            button7.Location = new Point(407, 54);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 21;
@@ -158,7 +162,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(484, 190);
+            button8.Location = new Point(488, 54);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 20;
@@ -168,7 +172,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(484, 148);
+            button4.Location = new Point(488, 12);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 19;
@@ -178,7 +182,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(403, 148);
+            button3.Location = new Point(407, 12);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 18;
@@ -188,7 +192,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(322, 148);
+            button2.Location = new Point(326, 12);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 17;
@@ -198,7 +202,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(241, 148);
+            button1.Location = new Point(245, 12);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 16;
@@ -206,11 +210,40 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(125, 403);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(588, 195);
+            textBox1.TabIndex = 36;
+            // 
+            // button17
+            // 
+            button17.Location = new Point(712, 266);
+            button17.Name = "button17";
+            button17.Size = new Size(96, 35);
+            button17.TabIndex = 35;
+            button17.Text = "button17";
+            button17.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(200, 226);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(457, 156);
+            dataGridView1.TabIndex = 32;
+            // 
             // NbyMMatrixLoop
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1253, 753);
+            Controls.Add(textBox1);
+            Controls.Add(button17);
+            Controls.Add(dataGridView1);
             Controls.Add(button13);
             Controls.Add(button14);
             Controls.Add(button15);
@@ -229,7 +262,9 @@
             Controls.Add(button1);
             Name = "NbyMMatrixLoop";
             Text = "NbyMMatrixLoop";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -250,5 +285,8 @@
         private Button button3;
         private Button button2;
         private Button button1;
+        private TextBox textBox1;
+        private Button button17;
+        private DataGridView dataGridView1;
     }
 }

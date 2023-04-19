@@ -21,6 +21,7 @@ namespace WinFormsMatricesAndVectors
         public NbyMMatrixLoop()
         {
             InitializeComponent();
+            dataGridView1.AllowUserToAddRows = false;
             string[,] btnText = new string[4, 4];
             int loopCount = 1;
             for (int h = 0; h < 4; h++)
@@ -40,6 +41,7 @@ namespace WinFormsMatricesAndVectors
             MyMatrix = MathNet.Numerics.LinearAlgebra.Matrix<double>.Build.Dense(1, 1);
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Rows.Add(1);
+            CopyMatrixToDataGrid(MyMatrix);
             CopyDataGridToMatrix(MyMatrix);
 
         }
@@ -52,7 +54,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Rows.Add(1);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
             CopyDataGridToMatrix(MyMatrix);
         }
         private void button3_Click(object sender, EventArgs e)
@@ -65,7 +67,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Rows.Add(1);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button4_Click(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Columns.Add("Column4", "Column 4");
             dataGridView1.Rows.Add(1);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button5_Click(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace WinFormsMatricesAndVectors
             MyMatrix = MathNet.Numerics.LinearAlgebra.Matrix<double>.Build.Dense(2, 1);
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Rows.Add(2);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button6_Click(object sender, EventArgs e)
@@ -102,7 +104,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Rows.Add(2);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
 
@@ -116,7 +118,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Rows.Add(2);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button8_Click(object sender, EventArgs e)
@@ -130,7 +132,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Columns.Add("Column4", "Column 4");
             dataGridView1.Rows.Add(2);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button9_Click(object sender, EventArgs e)
@@ -141,7 +143,7 @@ namespace WinFormsMatricesAndVectors
             MyMatrix = MathNet.Numerics.LinearAlgebra.Matrix<double>.Build.Dense(3, 1);
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Rows.Add(3);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button10_Click(object sender, EventArgs e)
@@ -153,7 +155,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Rows.Add(3);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button11_Click(object sender, EventArgs e)
@@ -166,7 +168,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Rows.Add(3);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button12_Click(object sender, EventArgs e)
@@ -180,7 +182,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Columns.Add("Column4", "Column 4");
             dataGridView1.Rows.Add(3);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button13_Click(object sender, EventArgs e)
@@ -191,7 +193,7 @@ namespace WinFormsMatricesAndVectors
             MyMatrix = MathNet.Numerics.LinearAlgebra.Matrix<double>.Build.Dense(4, 1);
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Rows.Add(4);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button14_Click(object sender, EventArgs e)
@@ -203,7 +205,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column1", "Column 1");
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Rows.Add(4);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button15_Click(object sender, EventArgs e)
@@ -216,7 +218,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column2", "Column 2");
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Rows.Add(4);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         private void button16_Click(object sender, EventArgs e)
@@ -230,7 +232,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Columns.Add("Column3", "Column 3");
             dataGridView1.Columns.Add("Column4", "Column 4");
             dataGridView1.Rows.Add(4);
-            if (dataGridView1.Rows[0].Cells[0].Value != null)
+            CopyMatrixToDataGrid(MyMatrix);
                 CopyDataGridToMatrix(MyMatrix);
         }
         void LightUpMatrixDimensions(int row, int column)
@@ -269,8 +271,8 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < m1.ColumnCount; j++)
                 {
-                    DataGridViewCell cell = dataGridView1[j, i];
-                    cell.Value = m1[j, i];
+                    DataGridViewCell cell = dataGridView1[i, j];
+                    cell.Value = m1[i, j];
                 }
             }
         }
@@ -284,7 +286,7 @@ namespace WinFormsMatricesAndVectors
             {
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 {
-                    DataGridViewCell cell = dataGridView1[j, i];
+                    DataGridViewCell cell = dataGridView1[i, j];
                     m1[i, j] = double.Parse(cell.Value.ToString());
                 }
             }

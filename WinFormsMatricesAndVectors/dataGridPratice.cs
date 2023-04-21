@@ -40,7 +40,7 @@ namespace WinFormsMatricesAndVectors
             dataGridView1.Rows.Add(4);
 
             CopyMatrixToDataGrid(rowMatrix, dataGridView1);
-
+            Math.Log(1);
 
         }
 
